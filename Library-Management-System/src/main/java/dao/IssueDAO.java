@@ -17,7 +17,6 @@ public class IssueDAO {
 	private boolean isBookAvailable(int bookId) {
 		BookDAO bookdao = new BookDAO();
 		Book book = bookdao.getBook(bookId);
-		System.out.println("Book available?" + book.isAvailable());
 		if(book.isAvailable() == true) {
 			return true;
 		}

@@ -6,3 +6,10 @@
 *.prefs
 .metadata/.log
 .metadata/.log
+.metadata/.log
+.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location
+.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+.metadata/version.ini
+*.resources
