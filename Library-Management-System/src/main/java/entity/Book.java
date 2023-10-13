@@ -1,13 +1,57 @@
 package entity;
 
-import java.util.Objects;
+import java.sql.Timestamp;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Books")
 public class Book {
-	private int bookId;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "book_id")
+    private int bookId;
+
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "author")
     private String author;
+
+    @Column(name = "isbn")
     private String isbn;
+
+    @Column(name = "available")
     private boolean available;
+
+    @Column(name = "created_at")
+    private Timestamp createdAt;
+
+    @Column(name = "updated_at")
+    private Timestamp updatedAt;
+	
+	public Book(String title, String author, String isbn) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.isbn = isbn;
+	}
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
+	public Timestamp getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(Timestamp createdAt) {
+		this.createdAt = createdAt;
+	}
+	public Timestamp getUpdatedAt() {
+		return updatedAt;
+	}
+	public void setUpdatedAt(Timestamp updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	
 	public int getBookId() {
 		return bookId;
 	}
@@ -38,27 +82,5 @@ public class Book {
 	public void setAvailable(boolean available) {
 		this.available = available;
 	}
-	@Override
-	public int hashCode() {
-		return Objects.hash(author, available, bookId, isbn, title);
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Book other = (Book) obj;
-		return Objects.equals(author, other.author) && available == other.available && bookId == other.bookId
-				&& Objects.equals(isbn, other.isbn) && Objects.equals(title, other.title);
-	}
-	@Override
-	public String toString() {
-		return "Book [bookId=" + bookId + ", title=" + title + ", author=" + author + ", isbn=" + isbn + ", available="
-				+ available + "]";
-	}
-
-    
+  
 }

@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://ec2-3-21-75-29.us-east-2.compute.amazonaws.com:3306/LMS</property>
+        <property name="hibernate.connection.username">trung</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="entity.Book"/>
+        <mapping class="entity.User"/>
+        <mapping class="entity.IssueDetails"/>
+    </session-factory>
+</hibernate-configuration>

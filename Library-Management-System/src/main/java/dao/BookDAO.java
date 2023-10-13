@@ -58,7 +58,7 @@ public class BookDAO {
 	         stmt.setString(1, book.getTitle());
 	         stmt.setString(2, book.getAuthor());
 	         stmt.setString(3, book.getIsbn());
-	         stmt.setBoolean(4, book.isAvailable());
+	         stmt.setBoolean(4, true);
 	         return stmt.executeUpdate() > 0;
 	     } catch (Exception e) {
 	         e.printStackTrace();
