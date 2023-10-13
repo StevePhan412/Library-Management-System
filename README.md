@@ -17,32 +17,19 @@ This system implements a role-based access control mechanism to provide differen
 
 ### Features:
 
-- **Administrators**: 
-    - Dashboard for managing users
-    - Inventory management
-    - Fine collection
-    
-- **Users**:
+**Admin**:
     - Search for books
     - Check issue and return dates
-    - Make payments for fines or charges
     
-Data will be displayed in a table format using the `rs2xml.jar` library, enhancing both the administrative and user experience.
-
 ## System Structure
 
 ### Backend
 
-1. **Role-Based Access Control**: Differentiate between admin and user functionalities.
-2. **API Layer**: Utilizes a RESTful API for CRUD (Create, Read, Update, Delete) operations related to book records, user management, and fine calculations.
-3. **Service Layer**: Encapsulates business logic, like fine calculations and due date tracking.
-4. **Data Access Layer**: Utilizes MySQL JDBC Connector for database interactions facilitated by MySQL Community Server.
+1. **API Layer**: Utilizes a RESTful API for CRUD (Create, Read, Update, Delete) operations related to book records, user management, and fine calculations.
+2. **Data Access Layer**: Utilizes MySQL JDBC Connector for database interactions facilitated by MySQL Community Server.
 
 ### Frontend
-
-1. **Java Swing Library**: Used to develop a user-friendly graphical interface.
-2. **Admin Dashboard**: Provides functionalities for user management, book inventory, and fine collection.
-3. **User Interface**: Enables users to search for books, check issue and return dates, and make payments.
+One centralized Library Management System Dashboard
 
 ## Additional Features
 
@@ -51,12 +38,10 @@ Data will be displayed in a table format using the `rs2xml.jar` library, enhanci
 
 ## Technologies Required
 
-- **Java**: For Backend logic and frontend interface.
-- **Java Swing Library**: For GUI components.
+- **Java Hibernate**: For Backend logic and frontend interface.
 - **MySQL JDBC Connector**: For database connectivity.
 - **MySQL Community Server**: As the database server.
-- **rs2xml.jar**: For data display in table format.
-
+- 
 ## Tutorial Links
 - [Java Programming Basics](https://www.w3schools.com/java/)
 - [Java Swing Tutorial](https://www.javatpoint.com/java-swing)
